@@ -24,4 +24,6 @@ var friends = [
         photo: "https://i.pinimg.com/736x/a0/eb/3f/a0eb3f245b9c4a5a2d55672098ad6bea--otaku-anime-anime-manga.jpg",
         scores: [1, 1, 1, 2, 2, 2, 3, 3, 3, 5]
     }
-]
+];
+
+module.exports = friends;
