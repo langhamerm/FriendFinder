@@ -6,7 +6,7 @@ module.exports = function (app) {
         res.json(friends);
     });
 
-    app.post("api/friends", function (req, res) {
+    app.post("/api/friends", function (req, res) {
         console.log(req.body.scores);
         // user object to hold name, pic, and scores from survey
         var user = req.body;
