@@ -7,7 +7,7 @@ var friends = [
     {
         name: "Elizabeth Liones",
         photo: "http://pm1.narvii.com/6331/d0b0a2464e3b1e2185fc36d6c3883a0352a560d0_00.jpg",
-        scores: [2, 5, 4, 3, 4, 5, 2, 2, 4, 5]
+        scores: [2, 5, 4, 3, 4, 5, 2, 2, 4, 4]
     },
     {
         name: "Diane Seprent Sin of Envy",
