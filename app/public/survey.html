@@ -15,7 +15,7 @@
 
 <body>
 
-    <div class="container">
+    <div id="myDIV" class="container">
 
         <h1>SURVEY</h1>
         <p>Take the following survey to find out who from The Seven Deadly Sins you match up with!</p>
@@ -142,30 +142,28 @@
         <div class="text-center">
             <button id="submitBtn" type="submit" class="btn btn-danger btn-lg">Submit</button>
         </div>
-        <div id="bestMatchModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h3 class="modal-title">Your Seven Deadly Sins Match!</h3>
+    </div>
+    <div class="container" id="newDiv">
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <h3>Your Seven Deadly Sins Match!</h3>
                     </div>
-                    <div class="modal-body">
+                    <div>
                         <h2 id="bestMatch"></h2>
                         <img id="bestMatchPic" src="#">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container">
-                <p><a href="/api/friends">API Friends Link</a> | <a href="https://github.com/langhamerm/FriendFinder">Github</a>
-            </div>
-        </footer>
-
     </div>
+    <footer class="footer">
+        <div class="container">
+            <p><a href="/api/friends">API Friends Link</a> | <a href="https://github.com/langhamerm/FriendFinder">Github</a>
+        </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -173,6 +171,14 @@
 
 </html>
 <script type="text/javascript">
+    function emptyDiv() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
     $("#submitBtn").on("click", function (event) {
         event.preventDefault();
 
@@ -202,17 +208,11 @@
                     $("#question10").val()
                 ]
             };
+            emptyDiv();
             var currentURL = window.location.origin;
-            // $.ajax({ url: currentURL, method: "GET" })
-            //     .then(function (data) {
-            //         $("#bestMatch").text(data.name);
-            //         $("#bestMatchPic").attr("src", data.photo);
-            //         $("#bestMatchModal").modal("toggle");
-            //     })
             $.post(currentURL + "/api/friends", newUser, function (data) {
                 $("#bestMatch").text(data.name);
                 $("#bestMatchPic").attr("src", data.photo);
-                $("#bestMatchModal").modal("toggle");
             });
         }
         else {

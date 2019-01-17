@@ -20,7 +20,12 @@ module.exports = function (app) {
         var minimumDifference = 40;
 
         //Compare potential match scores with a for loop
-        for (var i = 0; friends.length; i++) {
+        for (var i = 0; i < friends.length; i++) {
+            console.log('==========================================');
+            
+            console.log(friends[i]);
+
+            console.log('==========================================');
             var totalDifference = 0;
             for (var x = 0; x < friends[i].scores.length; x++) {
                 var difference = Math.abs(user.scores[x] - friends[i].scores[x]);
