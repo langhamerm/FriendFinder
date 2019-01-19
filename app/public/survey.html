@@ -145,18 +145,24 @@
     </div>
     <div class="container" id="newDiv" style="visibility: hidden;">
         <div>
-            <div>    
+            <div>
                 <div>
                     <div>
                         <h3>Your Seven Deadly Sins Match!</h3>
                     </div>
-                    <div>
+                    <div id="pic-row" class="row">
+                    <div id="matchbox" class="col-lg-6">
                         <h2 id="bestMatch"></h2>
                         <img id="bestMatchPic" src="#">
+                    </div>
+                    <div id="yourbox" class="col-lg-6">
+                        <h2 id="yourName"></h2>
+                        <img id="yourPic" src="#">
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <footer class="footer">
         <div class="container">
@@ -176,7 +182,7 @@
         var y = document.getElementById("newDiv");
         if (x.style.display === "none") {
             x.style.display = "block";
-        } 
+        }
         else {
             x.style.display = "none";
         }
@@ -221,6 +227,8 @@
             $.post(currentURL + "/api/friends", newUser, function (data) {
                 $("#bestMatch").text(data.name);
                 $("#bestMatchPic").attr("src", data.photo);
+                $("#yourName").text(newUser.name);
+                $("#yourPic").attr("src", newUser.photo);
             });
         }
         else {
