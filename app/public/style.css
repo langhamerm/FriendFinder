@@ -1,0 +1,13 @@
+body {
+    background-image: url("https://stmed.net/sites/default/files/the-seven-deadly-sins-wallpapers-26148-9014732.jpg");
+    color: yellow;
+}
+#banner {
+    color: rgba(0, 225, 255, 0.521);
+}
+#survey-btn {
+    color: yellow;
+}
+#newDiv {
+    display: block;
+}
