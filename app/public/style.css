@@ -1,10 +1,36 @@
 body {
-    background-image: url("https://stmed.net/sites/default/files/the-seven-deadly-sins-wallpapers-26148-9014732.jpg");
+    background-image: url("http://www.4usky.com/data/out/1/163978793-7-deadly-sins-wallpapers.png");
+    background-size: cover;
     color: yellow;
+    text-shadow: 5px 2px #fc00006c;
 }
 #banner {
-    color: rgba(0, 225, 255, 0.521);
+    color: yellow;
+    font-family: 'Bungee', cursive;
+    text-shadow: 5px 2px #fc00006c;
+    background-image: url("https://stmed.net/sites/default/files/the-seven-deadly-sins-wallpapers-26148-9014732.jpg");
 }
 #survey-btn {
-    color: yellow;
+    background:    #ffff00;
+    background:    -webkit-linear-gradient(#ff0000, #ffff00 50%, #ff0000);
+    background:    linear-gradient(#ff0000, #ffff00 50%, #ff0000);
+    border:        8px solid #ffd966;
+    border-radius: 1000px;
+    box-shadow:    3px -3px #999999;
+    padding:       20px 20px;
+    color:         #0000ff;
+    display:       inline-block;
+    font:          normal 700 30px/1 "Noto Sans", sans-serif;
+    text-align:    center;
+    text-shadow:   2px 2px #eeeeee;
+}
+.jumbotron {
+    background-color: transparent;
+}
+footer {
+    text-shadow: none;
+    margin-top: 250px;
+}
+#butbox {
+    margin-top: 100px;
 }
